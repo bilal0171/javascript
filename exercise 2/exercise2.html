@@ -6,11 +6,13 @@
     <title>Exercise 2</title>
 </head>
 <body>
+    <p id="sentence"></p>
     <script>
     let sentence,sentence_length;
     sentence="Javascript is Fun";
+    document.getElementById('sentence').innerHTML=sentence;
     sentence_length=sentence.length;
-    console.log(sentence);
+    
     console.log(sentence_length);
 </script>
 </body>
