@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise 4</title>
+</head>
+<body>
+   <form id="area of a circle">
+    <input type="text" id="radius"><br>
+    <button type="button" onclick="area()">Calculate</button><br>
+   </form>
+   <label for class="areaofcircle">Area of Circle: </label>
+   <span  class="areaofcircle" id="areaofcircle"></span>
+   <script>
+    function area(){
+        const pie = 3.14;
+        const r = parseFloat(document.getElementById('radius').value);
+        if (isNaN(r)){
+            alert("enter a valid number");
+            return;
+        }
+        const result = pie * (r * r);
+        console.log(result);
+        document.getElementById("areaofcircle").textContent = result;
+        
+
+    }
+   </script>
+
+</body>
+</html>
