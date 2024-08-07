@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form id="calculations"></form>
+    <input type="text" id="num1" placeholder="number1"><br>
+    <input type="text" id="num2" placeholder="number2"><br>
+    <button type="button" onclick="operations()">submit</button><br>
+<label for class="sum">Sum:</label>
+<span id ="sum" class="sum">0</span><br>
+
+<label for class="difference">Difference:</label>
+<span class="difference" id="difference">0</span><br>
+
+<label for class="product">Product:</label>
+<span class="product" id="product">0</span><br>
+
+<label for class="quotient">Quotient</label>
+<span id="quotient" class="quotient">0</span><br>
+
+<script>
+    function operations(){
+    const a= parseFloat(document.getElementById('num1').value)
+    const b= parseFloat(document.getElementById('num2').value)
+    if(isNaN(a)||isNaN(b)){
+        alert('Enter a valid Number');
+        return;
+    }
+    const sum = a+b;
+    const diff = a-b;
+    const product = a*b;
+    const quotient = a/b;
+    document.getElementById('sum').textContent = sum;
+    document.getElementById('difference').textContent = diff;
+    document.getElementById('product').textContent = product;
+    document.getElementById('quotient').textContent = quotient;
+    console.log(sum);
+    console.log(diff);
+    console.log(product);
+    console.log(quotient);
+
+    }
+
+</script>
+    
+</body>
+</html>
