@@ -19,3 +19,6 @@ Use logical operators (AND, OR, NOT) to combine these values and log the results
 #Exercise 6:
 Create an array colors with a list of color names.
 Access and log the first and last elements of the array.
+
+#Exercise 7:
+Add a new color to the end of the colors array and log the updated array.
