@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise 6</title>
+</head>
+<body>
+<p id="name"></p>
+    <script>
+        const colors = ["Red" , "Blue" , "Green" , "White"];
+        let colorlast = colors.length-1;
+        document.getElementById('name').innerHTML="The list of colors are :" + "<br>" + colors.join("<br>") + 
+        "<br>" + "First Color :" + colors[0] + "<br>" +
+        "Last Color : " + colors[colorlast];
+        
+    </script>
+</body>
+</html>

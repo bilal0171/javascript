@@ -12,3 +12,10 @@ Perform addition, subtraction, multiplication, and division on these numbers and
 Create a variable radius and assign it a value.
 Calculate the area of a circle with this radius (use the formula π * radius * radius) and log the result.
 
+#Exercise 5:
+Declare two variables a and b and assign them boolean values (true or false).
+Use logical operators (AND, OR, NOT) to combine these values and log the results.
+
+#Exercise 6:
+Create an array colors with a list of color names.
+Access and log the first and last elements of the array.
