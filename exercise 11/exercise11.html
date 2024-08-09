@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise 11</title>
+</head>
+<body>
+   <div id="palindrome checker">
+    <form id="palindromeString">
+        <input type="text" id="string" placeholder="Enter a word :"><br>
+        <button type="button" onclick="palindrome()">Submit</button>
+    </form>
+   </div> 
+   <p id="output"></p>
+   <p id="output2"></p>
+<script>
+    function palindrome(){
+        const string = document.getElementById('string').value;
+        const s= string.toLowerCase().replace(/[^a-z0-9]/g,'');
+        const reversed = s.split('').reverse().join('');
+        document.getElementById('output').innerHTML= Boolean(s===reversed);
+        document.getElementById('output2').innerHTML="value in input text is : "+ s;
+
+        
+    }
+</script>
+</body>
+</html>
