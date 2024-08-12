@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise 14</title>
+</head>
+<body>
+    <p id="demo1"></p>
+    <p id="demo2"></p>
+    <script>
+        
+        function majorityElement(array){
+            let majority = array[0];
+            let eachValueCount = {};
+            let maxCount = 0
+            for (let value of array){
+                eachValueCount[value] = (eachValueCount[value] || 0) + 1;
+                if ( eachValueCount[value] > maxCount){
+                    maxCount = eachValueCount[value];
+                    majority = value;
+                }
+
+            }
+            return majority;
+
+        }
+        let array= [40,30,30,20,20,20,200,20];
+        repeat = majorityElement(array);
+
+        document.getElementById('demo1').innerHTML = array;
+        document.getElementById('demo2').innerHTML = repeat;
+        
+
+    </script>
+</body>
+</html>
