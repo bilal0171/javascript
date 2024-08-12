@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise 13</title>
+</head>
+<body>
+    <p id ='demo1'></p>
+    <p id = 'demo2'></p>
+<script>
+    function removeDuplicates(filtering){
+        let seen = { };
+        return filtering.filter((value)=>{
+            if (seen[value]){
+                return false;
+            }
+            else{
+                seen[value]=true;
+                return true;
+            }
+        });
+        
+       
+    }
+
+    let originalArray = [20,10,30,10,20,15];
+    let duplicateArray = removeDuplicates(originalArray);
+    document.getElementById('demo1').innerHTML = "original array:" + originalArray;
+    document.getElementById('demo2').innerHTML = "filtered array:" + duplicateArray;
+    
+</script>
+    
+</body>
+</html>

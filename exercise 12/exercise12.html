@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise 12</title>
+</head>
+<body>
+    <input type="number" id="reversedInt" value="123">
+    <button type="button" onclick="reversedInteger()">submit</button>
+    <span id="demo"> 0 </span>
+    <script>
+        function reversedInteger(){
+            let x = parseInt(document.getElementById('reversedInt').value);
+            let reverse = 0;
+            const maxInt = Math.pow(2, 31) - 1;
+            const minInt = Math.pow(-2, 31);
+            while(x>0){
+                ld = x%10;
+                reverse = reverse * 10 + ld;
+                if (reverse > maxInt || reverse < minInt) {
+                    document.getElementById('demo').textContent = 0;
+                    console.log(0);
+                    return;
+                }
+                x = Math.floor(x / 10);
+
+            }
+           
+            document.getElementById('demo').textContent= reverse;
+            console.log(reverse);
+        }
+       
+    </script>
+    
+</body>
+</html>
