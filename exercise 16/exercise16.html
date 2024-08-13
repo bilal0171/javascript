@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise 16</title>
+</head>
+<body>
+    <div id="demo"></div>
+    <script>
+        function isValid(s) {
+            const brackets = {
+                '{': '}',
+                '(': ')',
+                '[': ']'
+            };
+            const stack = [];
+            for (let char of s) {
+                if (brackets[char]) {
+                    
+                    stack.push(char);
+                } else {
+                    
+                    const topElement = stack.length ? stack.pop() : '#';
+                    if (brackets[topElement] !== char) {
+                        return false;
+                    }
+                }
+            }
+           
+            return stack.length === 0;
+        }
+
+                const testCases = ["{}", "[)", "(}"];
+        
+        
+        const results = document.getElementById('demo');
+
+        
+        for (let test of testCases) {
+            const result = isValid(test) ? "Valid" : "Invalid";
+            results.innerHTML += `<p>"${test}" is ${result}</p>`; 
+        }
+    </script>
+</body>
+</html>
