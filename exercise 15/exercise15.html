@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise 15</title>
+</head>
+<body>
+    <input type="number" id="number"><br>
+    <button type="submit" onclick="fizzBuzz()">Check</button>
+    <p id="demo"></p><br>
+    <script>
+        function fizzBuzz(){
+        let n = parseInt(document.getElementById('number').value);
+        let array = [];
+        for (let i = 1 ; i <= n; i++){
+            if(i % 3===0 && i % 5===0){
+                array.push('fizzBuzz');
+            }
+            else if (i % 3===0){
+                array.push('fizz')
+
+            }
+            else if (i % 5===0){
+                array.push('buzz')
+            }
+            else{
+                array.push(i.toString());
+            }
+        }
+        document.getElementById('demo').innerHTML = array.join(",")
+    }
+    
+    </script>
+</body>
+</html>
