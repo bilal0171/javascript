@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise 18</title>
+</head>
+<body>
+    <p id = 'demo1'></p>
+    <p id = 'demo2'></p>
+    <script>
+        function longest(strings){
+            let prefix = "";
+            if (strings.length===0) return"";
+            strings.sort();
+            let firstString = strings[0];
+            let lastString = strings[strings.length - 1];
+            for(let i = 0 ; i < firstString.length && i < lastString.length ; i++){
+                if ( firstString[i]===lastString[i]){
+                    prefix = prefix + firstString[i];
+                } else{
+                    break;
+                }
+                
+            }
+            return prefix;
+        }
+    let strings = [ "amal", "aman" ,"amaal" ];
+    let result = longest(strings);
+    console.log(result); 
+    document.getElementById("demo1").innerHTML= "group of strings" + "<br>" + strings;
+    document.getElementById('demo2').innerHTML =  result;  
+    </script>
+</body>
+</html>
