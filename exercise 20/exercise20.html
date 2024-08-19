@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise 20</title>
+</head>
+<body>
+
+    <script>
+        function anogram(str){
+            let chararr= str.split('');
+            chararr.sort();
+            let sortedarr = chararr.join('');
+            return sortedarr;
+
+
+        }
+        let str1 ="silent";
+        let str2 = "listen";
+        let sorted = anogram(str1);
+        let sorted2 = anogram(str2);
+        if (sorted === sorted2){
+            console.log("it is an anogram");
+        }else{
+            console.log("not an anogram");
+        }
+        console.log(sorted); 
+        console.log(sorted2);      
+
+    </script>
+</body>
+</html>
