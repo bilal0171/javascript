@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise 24</title>
+</head>
+<body>
+  <script>
+    function groupAnogram(strs){
+      let n = strs.length - 1;
+      let array = new Map();
+      let array1= [];
+      let i=0;
+      
+     while (i<=n){
+        let splitstrs = strs[i].split('');
+        let sortedstrs = splitstrs.sort().join('');
+        
+        if (array.has(sortedstrs) ){
+          array.get(sortedstrs).push(strs[i]);
+          array1.push(strs[i]);
+
+        }
+        else{
+          array.set(sortedstrs,[strs[i]]);
+        }
+        i++;
+
+        
+
+
+      }
+      return [array,array1];
+    }
+    let str = ['silent','arshad','adarsh','listen','bilal','ivin'];
+    let result = groupAnogram(str);
+    console.log(result);
+  </script>  
+</body>
+</html>
