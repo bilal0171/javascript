@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise 23</title>
+</head>
+<body>
+    <script>
+      function threeSum(array,result){
+
+        let totalElements = array.length;
+        let triplets = [];
+        let tripletMap = new Map();
+
+        for (let a = 0; a < totalElements - 2; a++) {
+
+            for (let b = a + 1; b < totalElements - 1; b++) {
+                for (let c = b + 1; c < totalElements; c++) {
+                    let sum = array[a] + array[b] + array[c]
+                    if (sum === 0) {
+                        let triplet = [array[a], array[b], array[c]];
+                        triplet.sort((x, y) => x - y);
+                        let tripletKey = triplet.join(',');
+
+                       
+                        if (!tripletMap.has(tripletKey)) {
+                            tripletMap.set(tripletKey, true);
+                            triplets.push(triplet);
+                        }
+                }
+            
+            }
+        }
+    }
+
+
+        return triplets.length > 0  ? triplets : "no triplets found";     
+
+        
+    }
+    
+      let array = [1,-1,0,2,-1,-2,1,0] 
+      let result = threeSum(array);
+      console.log(array);
+      console.log(result);  
+    </script>
+    
+</body>
+</html>
