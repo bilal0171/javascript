@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+      function longestSubStr(str){
+        let longestsubstr = "";
+        for (let i=0 ; i < str.length; i++ ){
+            for (let j = i+1; j <= str.length; j++){
+                let substring = str.substr(i, j-i);
+                if (isUnique(substring)){
+                    if (substring.length > longestsubstr.length){
+                        longestsubstr = substring;
+                    }
+                    
+                    
+                }
+            }
+        }
+        return longestsubstr;
+
+      } 
+      function isUnique(str){
+        let char = new Map();
+        for (let charset of str){
+            if(char.has(charset)){
+                return false
+            }
+            char.set(charset,true)
+        }
+            return true;
+
+        
+
+
+}
+      let str = "abcdefghijkaakl" 
+      let result = longestSubStr(str);
+      console.log(result);
+    </script>
+</body>
+</html>
