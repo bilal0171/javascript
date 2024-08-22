@@ -59,3 +59,30 @@ An input string is valid if open brackets are closed by the same type of bracket
 #Exercise 17:
 Write a function mergeSortedArrays that takes two sorted arrays arr1 and arr2 and returns a new array that merges both of them in sorted order.
 
+#Exercise 18:
+Write a function longestCommonPrefix that takes an array of strings and returns the longest common prefix string among them. If there is no common prefix, return an empty string.
+
+#Exercise 19:
+Write a function countPrimes that takes an integer n and returns the number of prime numbers less than n.
+
+#Exercise 20:
+Write a function isAnagram that takes two strings s and t and returns true if t is an anagram of s, false otherwise.
+An Anagram is a word or phrase formed by rearranging the letters of a different word or phrase, typically using all the original letters exactly once.
+
+#Exercise 21:
+Write a function twoSum that takes a sorted array of integers numbers and a target integer target.
+Return the indices of the two numbers such that they add up to target.
+
+#Exercise 22:
+Write a function maxArea that takes an array of integers height representing the height of vertical lines drawn at each index.
+Find two lines that together with the x-axis form a container that holds the most water and return the maximum amount of water it can hold. [Skipped].
+
+#Exercise 23:
+Write a function threeSum that takes an array nums and returns all unique triplets [a,b,c] such that a + b + c = 0.
+
+#Exercise 24:
+Write a function groupAnagrams that takes an array of strings strs and groups the anagrams together. [Incomplete]
+
+#Exercise 25:
+Write a function lengthOfLongestSubstring that takes a string s and returns the length of the longest substring without repeating characters.
+
